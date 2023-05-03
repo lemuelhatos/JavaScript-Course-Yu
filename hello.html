@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hello</title>
+    <script>
+
+        // function hello() {
+            // alert('Hello, world!');
+
+                     // this is the long way to do it
+            // if (document.querySelector('h1').innerHTML === 'Hello!'){
+            //     document.querySelector('h1').innerHTML = 'Goodbye!';
+            // } else{
+            //     document.querySelector('h1').innerHTML = 'Hello!';
+            // }
+
+                    // this is a shorter way to do it
+            // let heading = document.querySelector('h1');
+            // if (heading.innerHTML === 'Hello!'){
+            //     heading.innerHTML = 'Goodbye!';
+            // } else{
+            //    heading.innerHTML = 'Hello!';
+            // }
+
+                    // this is the best way to do it if you do not change "let"
+            // const heading = document.querySelector('h1');
+            // if (heading.innerHTML === 'Hello!'){
+            //     heading.innerHTML = 'Goodbye!';
+            // } else{
+            //    heading.innerHTML = 'Hello!';
+            // }
+
+
+            // application
+            document.addEventListener('DOMContentLoaded', function(){
+
+                // document.querySelector('form').onsubmit = f;
+                document.querySelector('form').onsubmit = function() {
+                    const name = document.querySelector('#name').value;
+                    alert(`Hello, ${name}!`);
+                };
+
+            });
+        
+        
+    </script>
+</head>
+<body>
+    <h1>Hello!</h1>
+    <!-- <button onclick="hello()">Click here!</button> -->
+    <form>
+        <input autofocus id="name" placeholder="Name" type="text">
+        <input type="submit">
+    </form>
+</body>
+</html>
